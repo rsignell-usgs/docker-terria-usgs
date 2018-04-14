@@ -36,14 +36,14 @@
     shareUrlPrefixes: {
         "g": {
             service: "gist",
-            accessToken: "[insert github gist tokken]"
+            accessToken: "[insert github gist token]"
         }
     },
     newShareUrlPrefix: "g",
     feedback: {
         userAgent: "TerriaBot (TerriaJS Feedback)",
         issuesUrl: "https://api.github.com/repos/[insert github account name]/[insert github repo name]/issues",
-        accessToken: "[insert github repo tokken]"
+        accessToken: "[insert github repo token]"
     },
 }
 
