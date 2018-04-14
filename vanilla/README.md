@@ -1,4 +1,4 @@
-Dockerfile for installing the USGS TerriaMap (builds the image from the repo `zdefne-usgs/TerriaMap`)
+Dockerfile for installing the USGS TerriaMap (builds the image from the repo `zdefne-usgs/TerriaMap` )
  - Dockerfile
 
 Files to map in the docker-compose file:
