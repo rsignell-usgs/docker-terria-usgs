@@ -1,8 +1,8 @@
 Dockerfile for installing the USGS TerriaMap (builds the image from the repo `zdefne-usgs/TerriaMap` )
  - Dockerfile
 
-Files to map in the docker-compose fil (edit the tokkens in `deveserver_config.json` ):
- - deveserver_config.json 
+Files to map in the docker-compose file (edit the tokkens in `deveserverconfig.json` ):
+ - deveserverconfig.json 
  - config.json
  - usgs.json
  
