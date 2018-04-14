@@ -1,12 +1,12 @@
 #!/bin/bash
 cd /opt/docker
-docker-compose down
+docker stop terriamap
 docker rmi -f terria-local
-docker rm $(docker ps -qa –no-trunc –filter "status=exited")
-docker rmi $(docker images –filter "dangling=true" -q –no-trunc)
+docker rm $(docker ps -qa â€“no-trunc â€“filter "status=exited")
+docker rmi $(docker images â€“filter "dangling=true" -q â€“no-trunc)
 docker ps
 docker images
 cd ~/Docker
 docker build -t terria-local .
 cd /opt/docker
-docker-compose up -d
+docker-compose up -d terriamap
