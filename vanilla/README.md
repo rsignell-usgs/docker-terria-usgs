@@ -1,13 +1,32 @@
-Dockerfile for installing the USGS TerriaMap (builds the image from the repo `zdefne-usgs/TerriaMap` )
- - Dockerfile
 
-Files to map in the docker-compose file (edit the tokkens in `deveserverconfig.json` ):
- - deveserverconfig.json 
- - config.json
- - usgs.json
- 
- Example for a script to run to restart build the image an restart the docker container:
-  - apply_Changes.sh
+* Clone this repo:
+```
+git clone https://github.com/rsignell-usgs/docker-terria-usgs
+```
+
+* Copy content in vanilla directory to /opt/docker/vanilla
+
+* Build an image using `Dockerfile` called `terria-vanilla` by this command:
+```
+docker build -t terria-vanilla .
+```
+
+* Edit tokens in `devserverconfig.json`, `config.json` and `usgs.json`
+
+* Copy content in `docker-compose.yml` 
+
+* Edit nginx config file to map port 3002:
+
+```
+# terria-vanilla
+
+  location /terria-vanilla/ {
+    proxy_set_header Host $host;
+    proxy_read_timeout 3600;
+    proxy_pass http://terria-vanilla:3002/;
+    include /etc/nginx/conf.d/include/cors.include;
+  }
+```
 
 
  
