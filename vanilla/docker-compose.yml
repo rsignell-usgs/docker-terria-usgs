@@ -1,7 +1,7 @@
 terriamap:
   image: terria-vanilla
   ports:
-    - "3003:3001"
+    - "3002:3001"
   container_name: terria-vanilla
   volumes:
     - /opt/docker/vanilla/devserverconfig.json:/usr/local/app/TerriaMap/devserverconfig.json
