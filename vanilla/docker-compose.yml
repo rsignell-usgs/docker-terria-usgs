@@ -1,0 +1,9 @@
+terriamap:
+  image: terria-vanilla
+  ports:
+    - "3003:3001"
+  container_name: terria-vanilla
+  volumes:
+    - /opt/docker/vanilla/devserverconfig.json:/usr/local/app/TerriaMap/devserverconfig.json
+    - /opt/docker/vanilla/config.json:/usr/local/app/TerriaMap/wwwroot/config.json
+    - /opt/docker/vanilla/usgs.json:/usr/local/app/TerriaMap/wwwroot/init/usgs.json
