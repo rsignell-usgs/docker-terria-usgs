@@ -1,0 +1,40 @@
+{
+    initializationUrls: [
+        "usgs",
+    ],
+    parameters: {
+        disableSplitter: false,
+        autoPlay: false,
+        bingMapsKey: "AkaOmRFtjAb71cXgLwAGtLbj2RpkPKtVqAIroFQsocfurCBILxIeAWPkil7hhRy_",
+        googleUrlShortenerKey: null,
+        googleAnalyticsKey: null,
+        googleAnalyticsOptions: null,
+        disclaimer: {
+            text: "Disclaimer: The suggestions and illustrations included in this map are intended to support scientific research; however, they do not guarantee the safety of an individual or structure. The contributors and sponsors of this product do not assume liability for any injury, death, property damage, or other effects because of using this map. This map must not be used for navigation or precise spatial analysis. ",
+        },   
+        printDisclaimer:{
+            text: "Disclaimer: The suggestions and illustrations included in this map are intended to support scientific research; however, they do not guarantee the safety of an individual or structure. The contributors and sponsors of this product do not assume liability for any injury, death, property damage, or other effects because of using this map. This map must not be used for navigation or precise spatial analysis. ",
+        },
+        //globalDisclaimer: {
+            //confirmationRequired: false,
+            //buttonTitle: "I agree",
+            //title: "Disclaimer: ",
+            // If the current browser location is not prod, or is dev, then show a "not the real site" warning.
+            // The text of that is in lib/Views/DevelopmentDisclaimerPreamble.html
+            //prodHostRegex: ".\\.gov$",
+            //devHostRegex: "\\b(staging|preview|test|dev)\\.",
+           //enableOnLocalhost: false // If false, don't show this when running on localhost
+        //},  
+        developerAttribution: {
+            text: "U.S. Geological Survey",
+            link: "http://www.usgs.gov"
+        },
+        appName: "USGS Terria Map",
+        brandBarElements: [
+            "<table cellspacing=\"20\"><tr><td style=\"padding-right:18px\"> <a target=\"_blank\" href=\"https://www.usgs.gov/\"><img vertical-align=\"middle\"  src=\"https://github.com/zdefne-usgs/TerriaMap/blob/master/wwwroot/images/USGS_brand_logo.png?raw=true\" style=\"height:42;border:0\" title=\"U.S. Geological Survey\" /></a></td></tr></table>"
+        ],
+        supportEmail: "zdefne@usgs.gov",
+        proj4ServiceBaseUrl: "proj4def/",
+        feedbackUrl: "feedback",
+        }
+}
