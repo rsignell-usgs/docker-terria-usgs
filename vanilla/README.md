@@ -14,6 +14,7 @@ docker build -t terria-vanilla .
 ```
 
 * Edit tokens in `devserverconfig.json`, `config.json` and `usgs.json`
+- Get a personal access token for gist here: https://github.com/settings/tokens
 
 * Copy content in `docker-compose.yml` 
 
