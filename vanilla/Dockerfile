@@ -23,7 +23,12 @@ WORKDIR /usr/local/app/
 # ----------------------------------------
 
 RUN git clone https://github.com/TerriaJS/TerriaMap /usr/local/app/TerriaMap
+
 WORKDIR /usr/local/app/TerriaMap
+# If installing more than one instance of TerriaMap then replace the lines above with the ones below to clone in a differnt directory
+# For example:
+#RUN git clone -b USGS https://github.com/zdefne-usgs/TerriaMap /usr/local/app/TerriaUSGS
+#WORKDIR /usr/local/app/TerriaUSGS
 
 # ----------------------------------------
 # Customization for USGS
