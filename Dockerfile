@@ -28,10 +28,11 @@ WORKDIR /usr/local/app/TerriaMap
 # ----------------------------------------
 # Customization for USGS
 # ----------------------------------------
-COPY ./files/feedback.js /usr/local/app/TerriaUSGS/node_modules/terriajs-server/lib/controllers/feedback.js
-COPY ./files/index.js /usr/local/app/TerriaUSGS/index.js
-COPY ./files/UserInterface.jsx /usr/local/app/TerriaUSGS/lib/Views/UserInterface.jsx
-COPY ./images/ /usr/local/app/TerriaUSGS/wwwroot/build/
+COPY ./files/feedback.js /usr/local/app/TerriaMap/node_modules/terriajs-server/lib/controllers/feedback.js
+COPY ./files/index.js /usr/local/app/TerriaMap/index.js
+COPY ./files/UserInterface.jsx /usr/local/app/TerriaMap/lib/Views/UserInterface.jsx
+COPY ./images/ /usr/local/app/TerriaMap/wwwroot/build/
+
 
 RUN npm install
 RUN npm run gulp
@@ -46,7 +47,8 @@ CMD [ "node", "node_modules/terriajs-server/lib/app.js", "--config-file", "devse
 # ----------------------------------------
 # Customization for USGS
 # ----------------------------------------
-COPY ./files/feedback.js /usr/local/app/TerriaUSGS/node_modules/terriajs-server/lib/controllers/feedback.js
-COPY ./files/index.js /usr/local/app/TerriaUSGS/index.js
-COPY ./files/UserInterface.jsx /usr/local/app/TerriaUSGS/lib/Views/UserInterface.jsx
-COPY ./images/ /usr/local/app/TerriaUSGS/wwwroot/build/
+COPY ./files/feedback.js /usr/local/app/TerriaMap/node_modules/terriajs-server/lib/controllers/feedback.js
+COPY ./files/index.js /usr/local/app/TerriaMap/index.js
+COPY ./files/UserInterface.jsx /usr/local/app/TerriaMap/lib/Views/UserInterface.jsx
+COPY ./images/ /usr/local/app/TerriaMap/wwwroot/build/
+
