@@ -1,7 +1,7 @@
 FROM node:boron
 
-MAINTAINER Siavash Ameli <samei@berkeley.edu>
-LABEL Description="TerriaJS dockerized."
+MAINTAINER Rich Signell <rsignell@usgs.gov>
+LABEL Description="TerriaJS dockerized for USGS Applications"
 
 # ------------
 # Nodejs, Gdal

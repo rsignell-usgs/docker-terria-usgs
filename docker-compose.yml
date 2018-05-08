@@ -1,9 +1,9 @@
 terriamap:
-  image: terria-vanilla
+  image: rsignell/terria-usgs
   ports:
     - "3002:3001"
-  container_name: terria-vanilla
+  container_name: terria
   volumes:
-    - /opt/docker/vanilla/devserverconfig.json:/usr/local/app/TerriaMap/devserverconfig.json
-    - /opt/docker/vanilla/config.json:/usr/local/app/TerriaMap/wwwroot/config.json
-    - /opt/docker/vanilla/usgs.json:/usr/local/app/TerriaMap/wwwroot/init/usgs.json
+    - /opt/docker/terriamap/devserverconfig.json:/usr/local/app/TerriaMap/devserverconfig.json
+    - /opt/docker/terriamap/config.json:/usr/local/app/TerriaMap/wwwroot/config.json
+    - /opt/docker/terriamap/usgs.json:/usr/local/app/TerriaMap/wwwroot/init/usgs.json
