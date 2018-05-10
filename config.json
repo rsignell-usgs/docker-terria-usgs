@@ -33,7 +33,7 @@
         brandBarElements: [
             "<table cellspacing=\"20\"><tr><td style=\"padding-right:18px\"> <a target=\"_blank\" href=\"https://www.usgs.gov/\"><img vertical-align=\"middle\"  src=\"https://github.com/zdefne-usgs/TerriaMap/blob/master/wwwroot/images/USGS_brand_logo.png?raw=true\" style=\"height:42;border:0\" title=\"U.S. Geological Survey\" /></a></td></tr></table>"
         ],
-        supportEmail: "zdefne@usgs.gov",
+        supportEmail: "[insert support email]",
         proj4ServiceBaseUrl: "proj4def/",
         feedbackUrl: "feedback",
         }

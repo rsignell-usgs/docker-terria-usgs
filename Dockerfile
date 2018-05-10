@@ -19,11 +19,16 @@ RUN mkdir -p /usr/local/app/
 WORKDIR /usr/local/app/
 
 # ----------------------------------------
-# Use TerriaMap branch customized for USGS
+# Use the original TerriaMap branch
 # ----------------------------------------
 
 RUN git clone https://github.com/TerriaJS/TerriaMap /usr/local/app/TerriaMap
+
 WORKDIR /usr/local/app/TerriaMap
+# If installing more than one instance of TerriaMap then replace the lines above with the ones below to clone in a differnt directory
+# For example:
+#RUN git clone -b USGS https://github.com/zdefne-usgs/TerriaMap /usr/local/app/TerriaUSGS
+#WORKDIR /usr/local/app/TerriaUSGS
 
 # ----------------------------------------
 # Customization for USGS
@@ -32,7 +37,6 @@ COPY ./files/feedback.js /usr/local/app/TerriaMap/node_modules/terriajs-server/l
 COPY ./files/index.js /usr/local/app/TerriaMap/index.js
 COPY ./files/UserInterface.jsx /usr/local/app/TerriaMap/lib/Views/UserInterface.jsx
 COPY ./images/ /usr/local/app/TerriaMap/wwwroot/build/
-
 
 RUN npm install
 RUN npm run gulp
@@ -51,4 +55,3 @@ COPY ./files/feedback.js /usr/local/app/TerriaMap/node_modules/terriajs-server/l
 COPY ./files/index.js /usr/local/app/TerriaMap/index.js
 COPY ./files/UserInterface.jsx /usr/local/app/TerriaMap/lib/Views/UserInterface.jsx
 COPY ./images/ /usr/local/app/TerriaMap/wwwroot/build/
-
