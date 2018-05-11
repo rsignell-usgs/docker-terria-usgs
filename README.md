@@ -33,7 +33,7 @@ docker build -t terria-usgs .
 * Edit nginx config file to map port 3002:
 
 ```
-# terria-vanilla
+# terria-usgs
 
   location /terria-usgs/ {
     proxy_set_header Host $host;
