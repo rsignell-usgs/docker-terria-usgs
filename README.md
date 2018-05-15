@@ -54,3 +54,4 @@ docker build -t terria-vanilla .
 ```
 docker-compose up -d
 ``` 
+
