@@ -18,13 +18,13 @@ TerriaJS Docker configuration for USGS applications featuring:
     * Copy the `Dockerfile` in `install_from_original_repo` directory to a local folder.
   * Option 2: use the official version of the TerriaJS code with `COPY` commands to overwrite files that need to be customized. 
     * Copy the `Dockerfile` and the folders in `install_from_forked_repo` directory to a local folder. 
-    
+  Whether you selected Option 1 or Option 2, build the container with:  
   ```
   docker build -t terria-usgs .
   ```
 
 * Copy the config files in `required_files` to the directory where you have `docker-compose.yml`
-* Edit the copied files. Edit tokens in `devserverconfig.json` and `config.json`. Get a personal access token for gist here: https://github.com/settings/tokens
+* Edit the copied files modifying the tokens in `devserverconfig.json` and `config.json`. To get a personal access token for gist, go to: https://github.com/settings/tokens
 
 * Edit nginx config file to map port 3002.  It should look something like:
 
