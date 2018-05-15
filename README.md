@@ -19,16 +19,19 @@ Changes made by modifying the repository content or to the code:
 git clone https://github.com/rsignell-usgs/docker-terria-usgs
 ```
 
-* Choose one of the two installation options: Option 1 to install from the original TerriaJS repo and replace the files to customize or Otion 2 to install form the personal repo forked from TerriaJS. They produce the same result.   
+Choose one of the two installation options: Option 1 to install from the original TerriaJS repo and replace the files to customize or Option 2 to install form the personal repo forked from TerriaJS. They produce the same result.   
+
 ### Option 1 - Install from original repo 
-* Use the `Dockerfile` in the `install from original repo` to create an image called `terria-vanilla`. 
+* Use the `Dockerfile` in the `install from original repo` to create an image called `terria-vanilla` 
 
 ### Option 2 - Install from forked repo 
 * Copy content in `install from forked repo` directory to `/opt/docker/vanilla`
-* Use the `Dockerfile` in the `install from forked repo` to create an image called `terria-vanilla`. 
+* Use the `Dockerfile` in the `install from forked repo` to create an image called `terria-vanilla` 
 
-* Following steps are common in both installation options.  Create the image by the `docker buid` command below. If installing more than one instance of TerriaMap see the instructions in the `Dockerfile` to change the installation folder prior this commad. 
- ```
+Following steps are common in both installation options.  
+
+* Create the image by: 
+```
 docker build -t terria-vanilla .
 ```
 
@@ -48,4 +51,7 @@ docker build -t terria-vanilla .
   }
 ```
 
-* Start the conatiner with `docker-compose up -d` 
+* Start the conatiner with: 
+```
+docker-compose up -d
+``` 
