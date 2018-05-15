@@ -2,7 +2,7 @@
 TerriaJS container customized for USGS applications. See instructions below for installing a clean USGS TerriaMap from scratch. 
 
 # List of changes
-Vanilla folder reflects the following changes required to deploy USGS TerriaMap. Changes implemented through `init` and `config` files or mapping files :
+Following changes were applied to deploy USGS TerriaMap. Changes implemented through `init` and `config` files or mapping files :
  - Added USGS logo
  - Map starts in 2D map zoomed to USA
  - Added feedback tool and instructions in devserverconfig.json to customize it to use user's github tokens 
@@ -14,23 +14,28 @@ Changes made by modifying the repository content or to the code:
 
 
 # Recipe
-
 * Clone this repo:
 ```
 git clone https://github.com/rsignell-usgs/docker-terria-usgs
 ```
 
-* Copy content in vanilla directory to /opt/docker/vanilla
+Choose one of the two installation options: Option 1 to install from the original TerriaJS repo and replace the files to customize or Option 2 to install form the personal repo forked from TerriaJS. They produce the same result.   
 
-* Build an image using `Dockerfile` called `terria-vanilla` by the `docker buid` command below. If installing more than one instance of TerriaMap see the instructions in the `Dockerfile` to change the installation folder prior this commad. 
+#### Option 1 - Install from original repo 
+* Copy the `Dockerfile` in `install from original repo` directory to `/opt/docker/vanilla`
+
+#### Option 2 - Install from forked repo 
+* Copy the `Dockerfile` and the folders in `install from forked repo` directory to `/opt/docker/vanilla`
+
+Following steps are common in both installation options.  
+
+* Use the correct `Dockerfile` to create an image called `terria-vanilla`:
 ```
 docker build -t terria-vanilla .
 ```
 
-* Edit tokens in `devserverconfig.json`, `config.json` and `usgs.json`
-- Get a personal access token for gist here: https://github.com/settings/tokens
-
-* Copy content in `docker-compose.yml` 
+* Copy content in `required files` directory to `/opt/docker/vanilla`. These are the files that are mapped in `docker-compose.yml`
+* Edit the copied files. Edit tokens in `devserverconfig.json` and `config.json`. Get a personal access token for gist here: https://github.com/settings/tokens
 
 * Edit nginx config file to map port 3002:
 
@@ -45,3 +50,7 @@ docker build -t terria-vanilla .
   }
 ```
 
+* Start the conatiner with: 
+```
+docker-compose up -d
+``` 
