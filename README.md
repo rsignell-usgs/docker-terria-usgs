@@ -22,11 +22,11 @@ git clone https://github.com/rsignell-usgs/docker-terria-usgs
 Choose one of the two installation options: Option 1 to install from the original TerriaJS repo and replace the files to customize or Option 2 to install form the personal repo forked from TerriaJS. They produce the same result.   
 
 
-     #### Option 1 - Install from original repo 
-     * Copy the `Dockerfile` in `install from original repo` directory to `/opt/docker/vanilla`
+  #### Option 1 - Install from original repo 
+  * Copy the `Dockerfile` in `install from original repo` directory to `/opt/docker/vanilla`
 
-     #### Option 2 - Install from forked repo 
-     * Copy the `Dockerfile` and the folders in `install from forked repo` directory to `/opt/docker/vanilla`
+  #### Option 2 - Install from forked repo 
+  * Copy the `Dockerfile` and the folders in `install from forked repo` directory to `/opt/docker/vanilla`
 
 
 
