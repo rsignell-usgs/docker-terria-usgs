@@ -18,9 +18,8 @@ Changes made by modifying the repository content or to the code:
 ```
 git clone https://github.com/rsignell-usgs/docker-terria-usgs
 ```
-* Copy content in `required files` directory to `/opt/docker/vanilla`
 
-Choose one of the two installation options: Option 1 to install from the original TerriaJS repo and replace the files to customize or Otion 2 to install form the personal repo forked from TerriaJS. They produce the same result.   
+* Choose one of the two installation options: Option 1 to install from the original TerriaJS repo and replace the files to customize or Otion 2 to install form the personal repo forked from TerriaJS. They produce the same result.   
 ### Option 1 - Install from original repo 
 * Use the `Dockerfile` in the `install from original repo` to create an image called `terria-vanilla`. 
 
@@ -28,15 +27,13 @@ Choose one of the two installation options: Option 1 to install from the origina
 * Copy content in `install from forked repo` directory to `/opt/docker/vanilla`
 * Use the `Dockerfile` in the `install from forked repo` to create an image called `terria-vanilla`. 
 
-Following steps are common in both installation options.  Create the image by the `docker buid` command below. If installing more than one instance of TerriaMap see the instructions in the `Dockerfile` to change the installation folder prior this commad. 
+* Following steps are common in both installation options.  Create the image by the `docker buid` command below. If installing more than one instance of TerriaMap see the instructions in the `Dockerfile` to change the installation folder prior this commad. 
  ```
 docker build -t terria-vanilla .
 ```
 
-* Edit tokens in `devserverconfig.json`, `config.json` and `usgs.json`
-- Get a personal access token for gist here: https://github.com/settings/tokens
-
-* Copy content in `docker-compose.yml` 
+* Copy content in `required files` directory to `/opt/docker/vanilla`. These are the files that are mapped in `docker-compose.yml`
+* Edit the copied files. Edit tokens in `devserverconfig.json` and `config.json`. Get a personal access token for gist here: https://github.com/settings/tokens
 
 * Edit nginx config file to map port 3002:
 
@@ -51,3 +48,4 @@ docker build -t terria-vanilla .
   }
 ```
 
+* Start the conatiner with `docker-compose up -d` 
