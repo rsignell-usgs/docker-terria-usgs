@@ -27,9 +27,7 @@ Choose one of the two installation options: Option 1 to install from the origina
 #### Option 2 - Install from forked repo 
 * Copy the `Dockerfile` and the folders in `install from forked repo` directory to `/opt/docker/vanilla`
 
-Following steps are common in both installation options.  
-
-* Use the correct `Dockerfile` to create an image called `terria-vanilla`:
+Following steps are common in both installation options. Use the correct `Dockerfile` to create an image called `terria-vanilla`:
 ```
 docker build -t terria-vanilla .
 ```
