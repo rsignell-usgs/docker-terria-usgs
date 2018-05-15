@@ -18,6 +18,7 @@ TerriaJS Docker configuration for USGS applications featuring:
     * Copy the `Dockerfile` in `install_from_original_repo` directory to a local folder.
   * Option 2: use the official version of the TerriaJS code with `COPY` commands to overwrite files that need to be customized. 
     * Copy the `Dockerfile` and the folders in `install_from_forked_repo` directory to a local folder. 
+  
   Whether you selected Option 1 or Option 2, build the container with:  
   ```
   docker build -t terria-usgs .
